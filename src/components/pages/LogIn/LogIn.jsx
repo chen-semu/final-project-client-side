@@ -48,7 +48,7 @@ export default function SignIn() {
         `https://api.eva.pingutil.com/email?email=${email}`,
         requestOptions
       ).then((response) => response.json());
-    } catch (err) {}
+    } catch (err) {console.log(err);}
   }
   async function reactionToEmailValidation(data) {
     let response = await emailValidationApi(data.email);

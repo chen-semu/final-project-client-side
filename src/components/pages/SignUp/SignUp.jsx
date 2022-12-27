@@ -57,7 +57,8 @@ export default function SignUp() {
     if (response.data.webmail === true && response.data.deliverable === true) {
       return dispatch(signUpUser(data))
       .then(res=>console.log(res));
-    } else {
+    }
+     else {
       return console.log('email not found');;
     }
 };
