@@ -29,15 +29,16 @@ const logInUser= async (LogIn)=>{
 
 const signUpUser= async (register)=>{
   console.log(register, 'WORKS?');
-  return await fetch(`${basicAPI}/register`,{
-    method:'POST',
+  return await axios.post(`${basicAPI}/register`,{
+    // method:'POST',
     // headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({
-      email: `${register.email}`,
-      password: `${register.password}`,
-      passwordRep: `${register.passwordRep}`,
-      fullName: `${register.fullName}`
-    })
+    // body:JSON.stringify({
+    //   email: `${register.email}`,
+    //   password: `${register.password}`,
+    //   passwordRep: `${register.passwordRep}`,
+    //   fullName: `${register.fullName}`
+    // })
+    register
   })
   .then(res=>res.json())
   .catch((error)=>{console.log(error);})
