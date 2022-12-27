@@ -1,5 +1,5 @@
 
-const basicAPI='http://localhost:8080'
+const basicAPI='https://final-project-server-side.onrender.com'
 
 const fetchPackages= async ()=>{
   return await fetch(`${basicAPI}/packages`)

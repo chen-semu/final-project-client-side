@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 
-const basicAPI='http://localhost:9090/users'
+const basicAPI='https://final-project-server-side.onrender.com/users'
 
 const fetchAllUsers= async ()=>{
   return await fetch(`${basicAPI}`)
@@ -11,7 +11,7 @@ const fetchAllUsers= async ()=>{
 
 const logInUser= async (LogIn)=>{
   console.log(LogIn);
-  return await axios.post(`http://localhost:9090/users/log-in`,
+  return await axios.post(`${basicAPI}/log-in`,
   {
     // method:'POST',
     // headers:{'Content-Type':'application/json'},
