@@ -11,7 +11,7 @@ const fetchAllUsers= async ()=>{
 
 const logInUser= async (LogIn)=>{
   console.log(LogIn);
-  return await axios.post(`http://localhost:8080/users/log-in`,
+  return await axios.post(`${basicAPI}/log-in`,
   {
     // method:'POST',
     // headers:{'Content-Type':'application/json'},
@@ -29,7 +29,7 @@ const logInUser= async (LogIn)=>{
 
 const signUpUser= async (register)=>{
   console.log(register, 'WORKS?');
-  return await axios.post(`http://localhost:8080/users/register`,{
+  return await axios.post(`${basicAPI}/register`,{
     // method:'POST',
     // headers:{'Content-Type':'application/json'},
     // body:JSON.stringify({
